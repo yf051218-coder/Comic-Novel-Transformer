@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(Get-Content \"C:\\\\Users\\\\yf051\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D------LoreVista-sqlite--1---LoreVista-sqlite\\\\17d46096-9963-454b-be10-8753699f00e7\\\\tasks\\\\bt1ggvx67.output\")",
+      "Bash(pip install *)",
+      "Bash(python main.py)",
+      "Bash(start http://127.0.0.1:8000)",
+      "Bash(xdg-open http://127.0.0.1:8000)",
+      "Bash(python -c \"import main; print\\('Backend imports OK'\\)\")",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(python -c \"import main; print\\('OK'\\)\")"
+    ]
+  }
+}

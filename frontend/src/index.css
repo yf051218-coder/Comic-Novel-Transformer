@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Gray scale: warm dark surfaces → light text ── */
+  --color-gray-50: #1a1a2e;
+  --color-gray-100: #222244;
+  --color-gray-200: #2e2e4a;
+  --color-gray-300: #5a5672;
+  --color-gray-400: #7a7668;
+  --color-gray-500: #a09a8c;
+  --color-gray-600: #c8c0b0;
+  --color-gray-700: #dcd6c8;
+  --color-gray-800: #eae4d8;
+  --color-gray-900: #f4eee4;
+  --color-gray-950: #0a0a14;
+
+  /* ── Blue → Warm gold accent (monotonic: cream → deep gold) ── */
+  --color-blue-50: #faf4e8;
+  --color-blue-100: #f0e4c8;
+  --color-blue-200: #e8d8a8;
+  --color-blue-300: #dcc890;
+  --color-blue-400: #d0b870;
+  --color-blue-500: #c8a850;
+  --color-blue-600: #b89838;
+  --color-blue-700: #a08028;
+  --color-blue-800: #886820;
+  --color-blue-900: #705018;
+
+  /* ── Red: muted rose for dark bg ── */
+  --color-red-50: #2a181c;
+  --color-red-100: #3a2028;
+  --color-red-200: #4a2832;
+  --color-red-300: #d07080;
+  --color-red-400: #f07080;
+  --color-red-500: #fb7185;
+  --color-red-600: #e85068;
+  --color-red-700: #c83048;
+  --color-red-800: #a02038;
+  --color-red-900: #801828;
+
+  /* ── Emerald: muted for dark bg ── */
+  --color-emerald-50: #182a20;
+  --color-emerald-100: #1e3828;
+  --color-emerald-200: #244830;
+  --color-emerald-300: #60d090;
+  --color-emerald-400: #4ade80;
+  --color-emerald-500: #34d070;
+  --color-emerald-700: #20a050;
+  --color-emerald-800: #188040;
+  --color-emerald-900: #106030;
+
+  /* ── Amber: warm gold for progress ── */
+  --color-amber-50: #2a2018;
+  --color-amber-100: #3a2c1e;
+  --color-amber-200: #4a3824;
+  --color-amber-300: #8a6830;
+  --color-amber-400: #d4a040;
+  --color-amber-500: #e8b050;
+  --color-amber-600: #f0c060;
+  --color-amber-700: #e0a830;
+  --color-amber-800: #c89020;
+  --color-amber-900: #a07818;
+
+  /* ── Violet: keep vibrant for Image2 ── */
+  --color-violet-50: #201830;
+  --color-violet-100: #2a2040;
+  --color-violet-200: #342850;
+  --color-violet-300: #6850a0;
+  --color-violet-400: #8b6cf6;
+  --color-violet-500: #9d7af8;
+  --color-violet-600: #7c5ce0;
+  --color-violet-700: #6a48d0;
+  --color-violet-800: #5838b0;
+  --color-violet-900: #402890;
+
+  /* ── Rose: keep vibrant ── */
+  --color-rose-50: #2a1820;
+  --color-rose-100: #3a202a;
+  --color-rose-200: #4a2834;
+  --color-rose-300: #e07090;
+  --color-rose-400: #f08098;
+  --color-rose-500: #fb7190;
+  --color-rose-600: #e85078;
+  --color-rose-700: #c83058;
+  --color-rose-800: #a02040;
+  --color-rose-900: #801830;
+
+  /* ── Sky: keep readable ── */
+  --color-sky-50: #182830;
+  --color-sky-100: #1e3440;
+  --color-sky-200: #244050;
+  --color-sky-300: #5090b0;
+  --color-sky-400: #60b0d0;
+  --color-sky-500: #7dd3fc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0f0f1a;
+  color: #eae4d8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Premium scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(180, 160, 120, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 160, 120, 0.3);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180, 160, 120, 0.15) transparent;
+}
+
+/* ── Animations ── */
+@keyframes barbershop {
+  0% { background-position: 0 0; }
+  100% { background-position: 32px 0; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(200, 162, 62, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(200, 162, 62, 0.4);
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-subtle-float {
+  animation: subtle-float 3s ease-in-out infinite;
+}
